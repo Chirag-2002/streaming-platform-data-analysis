@@ -3,4 +3,5 @@ pandas
 numpy
 matplotlib
 mysql-connector-python
-plotly
+plotlyclea
+pymysql
