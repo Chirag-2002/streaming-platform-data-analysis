@@ -2,6 +2,5 @@ streamlit
 pandas
 numpy
 matplotlib
-mysql-connector-python
 plotlyclea
 pymysql

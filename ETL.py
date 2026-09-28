@@ -1,5 +1,4 @@
 import pandas as pd 
-import mysql.connector
 import pymysql
 
 def connect_database():
