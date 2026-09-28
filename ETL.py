@@ -1,5 +1,6 @@
 import pandas as pd 
 import pymysql
+import streamlit as st
 
 def connect_database():
     try :
