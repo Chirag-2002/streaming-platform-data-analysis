@@ -1,7 +1,24 @@
 import streamlit as st
-from Analysis import *
-from ETL import * 
+from ETL import (
+    connect_database,
+    clean_data_Jotstar,
+    clean_data_Liocinema
+)
+from Analysis import (
+    KPI,
+    total_users_growth_trends,
+    content_library_comparison,
+    user_demographics,
+    watch_time_analysis
+)
 
+
+conn = connect_database()
+cursor = conn.cursor()
+
+content_consumption, content, subscribers = clean_data_Jotstar(cursor)
+
+content_consumption_2, content_2, subscribers_2 = clean_data_Liocinema(cursor)
 
 st.title("OTT Platform Analysis Dashboard")
 kpi = KPI(content_consumption , content , subscribers , content_consumption_2 , content_2 , subscribers_2)
