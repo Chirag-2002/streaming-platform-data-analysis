@@ -1,6 +1,8 @@
 import pandas as pd 
 import pymysql
+import pymysql.cursors
 import streamlit as st
+
 
 def connect_database():
     try :
@@ -21,7 +23,7 @@ def connect_database():
         print("Database Connection Failed : " , e)
 
     # function to fetch Data
-def fetch_data(cursor , db_name , table_name) :
+def fetch_data(cursor , db_name , table_name):
         cursor.execute("Select * from {}.{}".format(db_name,table_name))
         return cursor.fetchall()
     
@@ -109,3 +111,12 @@ if __name__ == "__main__":
     conn = connect_database()
     if conn is not None :
         cursor = conn.cursor()
+        
+        cursor.execute("SELECT DATABASE();")
+
+        result = cursor.fetchone()
+
+        print("Current database:", result)
+
+        cursor.close()
+        conn.close()

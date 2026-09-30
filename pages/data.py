@@ -1,6 +1,5 @@
 import streamlit as st
-from ETL import *
-
+from ETL import (connect_database , clean_data_Jotstar , clean_data_Liocinema)
 
 conn = connect_database()
 cursor = conn.cursor()
