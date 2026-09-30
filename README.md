@@ -4,6 +4,8 @@ A complete end-to-end **Python-based data analysis and Streamlit dashboard proje
 
 This project covers the complete data analytics lifecycle — from database connection and ETL to data cleaning, analysis, visualization, cloud database migration, Git/GitHub management, secrets management, and Streamlit Cloud deployment.
 
+## LIVE PROJECT URL : https://streaming-analytics.streamlit.app/
+
 ---
 
 ## 📌 Project Overview
